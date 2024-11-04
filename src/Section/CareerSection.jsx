@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CareerPopup from "./CareerPopup";
+import { Col,Row} from "react-bootstrap";
 
 function CareerSection(props) {
   const [isOpen, setIsOpen] = useState(false);
