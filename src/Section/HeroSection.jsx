@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "../CSS/Hero.css";
 import Button from "react-bootstrap/esm/Button";
 import { Link } from "react-router-dom";
 import hero from "../Images/banner-image.png";
-import { Container,Row,Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function HeroSection(props) {
-  const mydata = [ 
+  const mydata = useMemo(() => [
     {
       title: "web",
       header: "Transform Your Vision into Digital Reality",
@@ -15,7 +15,7 @@ function HeroSection(props) {
     {
       title: "mobile",
       header: "Innovative Design Meets Expert Development",
-      para: "EmergeWiz is a leading mobile application development company, creating  innovative iOS and Android applications that boost brand presence and drive business growth.",
+      para: "EmergeWiz is a leading mobile application development company, creating innovative iOS and Android applications that boost brand presence and drive business growth.",
     },
     {
       title: "Graphics",
@@ -37,7 +37,6 @@ function HeroSection(props) {
       header: "Elevate Your Online Presence with Expert Digital Marketing",
       para: "EmergeWiz is a leading digital marketing company in Coimbatore, dedicated to driving business growth through innovative and result-oriented strategies",
     },
-
     {
       title: "about",
       header: "Transforming Ideas into Extraordinary Digital Solutions",
@@ -66,9 +65,10 @@ function HeroSection(props) {
     {
       title: "hero",
       header: "Elevate your business global visibility with EmergeWiz",
-      para: "Our expert team ensures your brand stands out in the digital world, driving growth and engagement through innovative solutions tailored to your needs.  Shaping the Future through Innovative  Development.  \n  Our exceptional development expertise transforms possibilities into realities, crafting Excellence solutions that redefine  industries and propel progress to new heights.",
+      para: "Our expert team ensures your brand stands out in the digital world, driving growth and engagement through innovative solutions tailored to your needs. Shaping the Future through Innovative Development. Our exceptional development expertise transforms possibilities into realities, crafting Excellence solutions that redefine industries and propel progress to new heights.",
     },
-  ];
+  ], []);
+
   const [data, setData] = useState(mydata);
   
   useEffect(() => {
@@ -78,18 +78,17 @@ function HeroSection(props) {
 
   return (
     <Container fluid="xxl" className="Hero_div py-5 mb-5">
-      <Container className="mt-2 pt-4   hero-header">
+      <Container className="mt-2 pt-4 hero-header">
         <Row className="g-5 py-5">
           <Col className="text-col text-center text-lg-start">
             <h1 className="hero-heading mb-4 zoomIn animated">
               {data[0].header}
             </h1>
-            <div className="hero-sub zoomIn   animated">
+            <div className="hero-sub zoomIn animated">
               {data[0].para.split("\n").map((i, key) => {
                 return (
                   <p
-                  className="p-lh"
-                    // style={{ lineHeight: "1.6", wordSpacing: "2px" }}
+                    className="p-lh"
                     key={key}
                   >
                     {i}
@@ -124,4 +123,3 @@ function HeroSection(props) {
 }
 
 export default HeroSection;
-

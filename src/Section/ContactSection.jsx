@@ -10,7 +10,7 @@ import axios from "axios";
 function ContactSection() {
     const { register, handleSubmit, resetField, formState: { errors } } = useForm();
     const onFormSubmit = data => {
-        const formData = new FormData();
+      //  const formData = new FormData();
 
         // formData.append('name',data.name);
         // formData.append('email',data.email);
