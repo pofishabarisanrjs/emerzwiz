@@ -69,7 +69,8 @@ function HeroSection(props) {
       para: "Our expert team ensures your brand stands out in the digital world, driving growth and engagement through innovative solutions tailored to your needs.  Shaping the Future through Innovative  Development.  \n  Our exceptional development expertise transforms possibilities into realities, crafting Excellence solutions that redefine  industries and propel progress to new heights.",
     },
   ];
-
+  const [data, setData] = useState(mydata);
+  
   useEffect(() => {
     const selected = mydata.filter((item) => item.title === props.option);
     setData(selected.length > 0 ? selected : mydata); // Fallback to mydata if no match found
@@ -81,10 +82,10 @@ function HeroSection(props) {
         <Row className="g-5 py-5">
           <Col className="text-col text-center text-lg-start">
             <h1 className="hero-heading mb-4 zoomIn animated">
-              {mydata[0].header}
+              {data[0].header}
             </h1>
             <div className="hero-sub zoomIn   animated">
-              {mydata[0].para.split("\n").map((i, key) => {
+              {data[0].para.split("\n").map((i, key) => {
                 return (
                   <p
                   className="p-lh"
