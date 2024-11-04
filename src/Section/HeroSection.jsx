@@ -70,10 +70,11 @@ function HeroSection(props) {
     },
   ];
   const [data, setdata] = useState(mydata);
+  
   useEffect(() => {
-    let selected = mydata.filter((item) => item.title == props.option);
-    setdata(selected);
-  }, [props.option,mydata]);
+    const selected = mydata.filter((item) => item.title === props.option);
+    setData(selected.length > 0 ? selected : mydata); // Fallback to mydata if no match found
+  }, [props.option, mydata]);
 
   return (
     <Container fluid="xxl" className="Hero_div py-5 mb-5">

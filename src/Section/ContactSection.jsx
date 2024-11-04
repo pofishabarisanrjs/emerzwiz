@@ -2,7 +2,7 @@ import React from "react";
 import '../CSS/Contact.css';
 import { Container } from "react-bootstrap";
 import { Row, Col } from 'react-bootstrap';
-import { FaPhone, FaLocationArrow } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import { IoMdMail, } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import axios from "axios";
