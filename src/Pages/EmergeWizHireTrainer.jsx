@@ -4,7 +4,6 @@ import { Container } from "react-bootstrap";
 import "../CSS/Emergewiztraining.css"
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useState } from "react";
 import Newsletter from "../Section/NewsletterSec";
 import ContactPopup from "../Section/ContactPopup";
 import HeroSection from "../Section/HeroSection";
@@ -18,9 +17,6 @@ export default function EmergeWizHireTrainer() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
-  const [services, setServices] = useState([]);
-
   let accord = [
     {
       question: "What is corporate training?",

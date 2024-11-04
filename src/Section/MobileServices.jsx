@@ -3,8 +3,6 @@ import { useLocation } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Row, Col, Card } from "react-bootstrap";
 import "../CSS/ServicePage.css";
-import { FaPaperPlane } from "react-icons/fa";
-import Form from "react-bootstrap/Form";
 import HeroSection from "./HeroSection";
 import TeamSection from "./TeamSection";
 import TestimonialCarousel from "./FeedbackSection";

@@ -9,7 +9,7 @@ import HeroSection from "../Section/HeroSection";
 import AccordionSection from "../Section/AccordionSection";
 import { Card } from "react-bootstrap";
 import Smartstorezfeature from "../JSON/Smartstorezfeature.json"
-import services from "../JSON/Smartstorezoffer";
+import service from "../JSON/Smartstorezoffer";
 import word from "../Images/newsletter.png"
 import Smartstoreztest from "../JSON/Smartstoreztest"
 
@@ -159,7 +159,7 @@ export default function Smartstorez() {
                     </div>
                     <Row className="d-flex align-items-stretch">
                         <h3 className="text-center mt-5 mb-3 cb">What We Offer</h3>
-                        {services.map(service => (
+                        {service.map(service => (
                             <Col key={service.id} sm={12} md={6} lg={3} className="mb-3">
                                 <div className="p-3 h-100">
                                     <div className="text-center border-blue p-3 sts h-100 d-flex flex-column justify-content-between">
