@@ -1,0 +1,84 @@
+
+.App {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2;
+    font-family: "Roboto", sans-serif !important;
+    color: #888;
+    background-color: #F3F6FF;
+    box-sizing: border-box;
+
+    /* border:  thin solid red; */
+}.row.equal-cols {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .p-lh{
+    word-spacing: 2px !important;
+    line-height: 1.6 !important;
+  }
+  .ic-size{
+    width: 40px;
+    height: 40px;
+  }
+  .copyright a{
+color: white;
+text-decoration: none;
+display: contents;
+
+  }
+  .row.equal-cols:before,
+  .row.equal-cols:after {
+    display: block;
+  }
+  .cl-prime{
+    color: #1863c9 !important;
+  }
+  .cl-green{
+    color: #0aac47 !important;
+  }
+  .cl-red{
+    color: red !important;
+  }
+  .bg-prime{
+    background-color: #1863c9 !important;
+  }
+  .bg-white{
+    background-color: white !important;
+  }
+  
+  .row.equal-cols > [class*='col-'] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .row.equal-cols > [class*='col-'] > * {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+  }
+
+
+  .mycard{
+    background-color: white;
+    border: 0.5px grey solid;
+    padding: 15px;
+    
+    /* color: rgb(61, 59, 59); */
+    box-shadow: 5px 5px;
+    transition:box-shadow 0.3s ease-in-out;
+  }
+  .mycard:hover{
+    box-shadow: 10px 10px;
+  }
+
+
+
