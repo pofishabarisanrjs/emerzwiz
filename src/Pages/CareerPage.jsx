@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Container,Row,Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import CareerSection from "../Section/CareerSection";
 import Myhelmet from "./Myhelmet";
 import ContactPopup from "../Section/ContactPopup";
@@ -22,13 +22,13 @@ function CareerPage() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  let metas={
-    title : "Best Web Development Company in Coimbatore",
-describe: "Looking for the best web development company in Coimbatore? We deliver innovative, custom web solutions with a focus on quality and client satisfaction."
+  let metas = {
+    title: "Best Web Development Company in Coimbatore",
+    describe: "Looking for the best web development company in Coimbatore? We deliver innovative, custom web solutions with a focus on quality and client satisfaction."
   }
   return (
     <div className="bg-white">
-      <Myhelmet mymeta={metas}/>
+      <Myhelmet mymeta={metas} />
       <Container fluid="xxl" className="projectPage_div py-5 mb-5">
         <Container className="my-5 py-5 px-lg-5">
           <Row className="g-5 py-5">
@@ -44,21 +44,29 @@ describe: "Looking for the best web development company in Coimbatore? We delive
       <Container fluid="xxl" className="service-div py-5 wow fadeInUp">
         <Container className="px-lg-5 text-center">
           <Row  >
-          <h3 >Jobs @ Emergewiz</h3>
-         <p className="p-lh "> Provide your details, and we present you the right opportunity. <br />Submit your resume with us along with a cover letter to hr@emergewiz.com</p>
+            <h3 >Jobs @ Emergewiz</h3>
+            <p className="p-lh "> Provide your details, and we present you the right opportunity. <br />Submit your resume with us along with a cover letter to hr@emergewiz.com</p>
           </Row>
           <Row className="g-4 equal-cols" >
 
-          <h3 className=" text-center  project-page-heading mt-5">
-          Current job openings
-              </h3>
+            <h3 className=" text-center  project-page-heading mt-5">
+              Current job openings
+            </h3>
             {data ? (
-              data.map((job) => {
-                if (job.status) return <CareerSection jobs={job} />;
-              })
+              data.length > 0 ? (
+                data.map((job) => {
+                  if (job.status) {
+                    return <CareerSection key={job.id} jobs={job} />;
+                  }
+                  return null; // Explicitly return null if the condition is not met
+                })
+              ) : (
+                <p>No jobs available.</p> // Display this if the data array is empty
+              )
             ) : (
-              <p>Loading...</p>
+              <p>Loading...</p> // Display this while data is loading
             )}
+
           </Row>
         </Container>
         <ContactPopup />

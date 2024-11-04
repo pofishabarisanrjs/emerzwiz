@@ -73,7 +73,7 @@ function HeroSection(props) {
   useEffect(() => {
     let selected = mydata.filter((item) => item.title == props.option);
     setdata(selected);
-  }, []);
+  }, [props.option,mydata]);
 
   return (
     <Container fluid="xxl" className="Hero_div py-5 mb-5">

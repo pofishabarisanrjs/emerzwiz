@@ -4,7 +4,6 @@ const services = [
     id: 1,
     title: "Functional Testing",
     description: "Our functional testing services will help you confirm that your software operates optimally as required. Every feature is thoroughly tested to ensure it fulfills the requirements and operates well across multiple situations.",
-    description: "Our functional testing services will help you confirm that your software operates optimally as required. Every feature is thoroughly tested to ensure it fulfills the requirements and operates well across multiple situations.",
     icon: <SiMongodb size={40} />
   },
   {
